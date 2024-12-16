@@ -1,0 +1,43 @@
+# Entornos virtuales
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+
+# Archivos de configuración sensibles
+*.env
+
+# Archivos de bases de datos locales
+db.sqlite3
+
+# Archivos de medios generados por el usuario
+media/
+
+# Archivos estáticos compilados
+staticfiles/
+static/
+
+# Configuración de IDEs y editores de texto
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Configuración de migraciones
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.pid
+
+# Archivos de compilación de frontend (si usas Node.js para manejar estilos o scripts)
+node_modules/
+npm-debug.log
+yarn-error.log
