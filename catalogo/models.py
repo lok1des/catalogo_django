@@ -21,6 +21,8 @@ class Marca(models.Model):
     def __str__(self):
         return self.nombre
 
+    # CRUD Listo --> Create, Read, Update, Delete
+
 
 # Modelo para Proveedor
 class Proveedor(models.Model):
@@ -31,6 +33,8 @@ class Proveedor(models.Model):
 
     def __str__(self):
         return self.nombre
+
+    # CRUD Listo --> Create, Read, Update, Delete
 
 
 # Modelo para Producto
@@ -50,6 +54,7 @@ class Producto(models.Model):
     def __str__(self):
         return self.nombre
 
+    # CRUD Listo --> Create, Read, Update, Delete
 
 # Modelo para Cliente
 class Cliente(models.Model):
@@ -61,6 +66,7 @@ class Cliente(models.Model):
     def __str__(self):
         return self.nombre
 
+    # CRUD Listo --> Create, Read, Update, Delete
 
 # Modelo para Venta
 class Venta(models.Model):
@@ -76,6 +82,8 @@ class Venta(models.Model):
     def __str__(self):
         return f"Venta {self.id} - {self.fecha}"
 
+    # CRUD Listo --> Create, Read, Update, Delete
+
 
 # Modelo para DetalleVenta
 class DetalleVenta(models.Model):
@@ -87,6 +95,8 @@ class DetalleVenta(models.Model):
 
     def __str__(self):
         return f"Detalle de Venta {self.venta.id}"
+    
+    # CRUD Listo --> Create, Read, Update, Delete
 
 
 # Modelo para Compra
@@ -102,6 +112,8 @@ class Compra(models.Model):
 
     def __str__(self):
         return f"Compra {self.id} - {self.fecha}"
+
+    # CRUD Listo --> Create, Read, Update, Delete
 
 
 # Modelo para DetalleCompra

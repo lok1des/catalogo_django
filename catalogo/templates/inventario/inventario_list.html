@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Inventarios</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">Lista de Inventarios</h1>
+        <a href="{% url 'inventario-create' %}" class="btn btn-primary mb-3">Crear Nuevo Inventario</a>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for inventario in inventarios %}
+                <tr>
+                    <td>{{ inventario.id }}</td>
+                    <td>{{ inventario.producto.nombre }}</td>
+                    <td>{{ inventario.cantidad }}</td>
+                    <td>
+                        <a href="{% url 'inventario-detail' inventario.id %}" class="btn btn-info btn-sm">Ver</a>
+                        <a href="{% url 'inventario-update' inventario.id %}" class="btn btn-warning btn-sm">Editar</a>
+                        <a href="{% url 'inventario-delete' inventario.id %}" class="btn btn-danger btn-sm">Eliminar</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4" class="text-center">No hay inventarios disponibles.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

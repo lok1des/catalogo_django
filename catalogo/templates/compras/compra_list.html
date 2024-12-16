@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">Lista de Compras</h1>
+        <a href="{% url 'compra-create' %}" class="btn btn-primary mb-3">Crear Nueva Compra</a>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Proveedor</th>
+                    <th>Fecha</th>
+                    <th>Total</th>
+                    <th>Usuario</th> <!-- Nueva columna para mostrar el usuario -->
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for compra in compras %}
+                <tr>
+                    <td>{{ compra.id }}</td>
+                    <td>{{ compra.proveedor.nombre }}</td>
+                    <td>{{ compra.fecha }}</td>
+                    <td>{{ compra.total }}</td>
+                    <td>{{ compra.usuario.username }}</td> <!-- Mostrar el nombre de usuario -->
+                    <td>
+                        <a href="{% url 'compra-detail' compra.id %}" class="btn btn-info btn-sm">Ver</a>
+                        <a href="{% url 'compra-update' compra.id %}" class="btn btn-warning btn-sm">Editar</a>
+                        <a href="{% url 'compra-delete' compra.id %}" class="btn btn-danger btn-sm">Eliminar</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="6" class="text-center">No hay compras disponibles.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

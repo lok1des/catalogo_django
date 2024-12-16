@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenidos a la Abarrotera</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5 text-center">
+        <h1 class="mb-4">Bienvenidos a la Abarrotera</h1>
+        <p class="lead">Tu tienda en línea para productos y más.</p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <a href="{% url 'categoria-list' %}" class="btn btn-outline-primary btn-lg mb-3 w-100">Categorías</a>
+            </div>
+            <div class="col-md-4">
+                <a href="{% url 'marca-list' %}" class="btn btn-outline-primary btn-lg mb-3 w-100">Marcas</a>
+            </div>
+            <div class="col-md-4">
+                <a href="{% url 'producto-list' %}" class="btn btn-outline-primary btn-lg mb-3 w-100">Productos</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <a href="{% url 'proveedor-list' %}" class="btn btn-outline-primary btn-lg mb-3 w-100">Proveedores</a>
+            </div>
+            <div class="col-md-4">
+                <a href="{% url 'cliente-list' %}" class="btn btn-outline-primary btn-lg mb-3 w-100">Clientes</a>
+            </div>
+            <div class="col-md-4">
+                <a href="{% url 'venta-list' %}" class="btn btn-outline-primary btn-lg mb-3 w-100">Ventas</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <a href="{% url 'compra-list' %}" class="btn btn-outline-primary btn-lg mb-3 w-100">Compras</a>
+            </div>
+            <div class="col-md-4">
+                <a href="{% url 'inventario-list' %}" class="btn btn-outline-primary btn-lg mb-3 w-100">Inventario</a>
+            </div>
+            <div class="col-md-4">
+                <a href="{% url 'promocion-list' %}" class="btn btn-outline-primary btn-lg mb-3 w-100">Promociones</a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p class="lead">Gracias a Chat Gpt por la realizacion y buen funcionamiento de este proyecto.</p>
+    </div>
+</body>
+</html>

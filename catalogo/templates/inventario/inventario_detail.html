@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Inventario</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">Detalle del Inventario</h1>
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <td>{{ inventario.id }}</td>
+            </tr>
+            <tr>
+                <th>Producto</th>
+                <td>{{ inventario.producto.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Cantidad</th>
+                <td>{{ inventario.cantidad }}</td>
+            </tr>
+        </table>
+        <a href="{% url 'inventario-update' inventario.id %}" class="btn btn-warning">Editar</a>
+        <a href="{% url 'inventario-delete' inventario.id %}" class="btn btn-danger">Eliminar</a>
+        <a href="{% url 'inventario-list' %}" class="btn btn-secondary">Volver</a>
+    </div>
+</body>
+</html>

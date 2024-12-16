@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Producto</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">Detalle del Producto</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ producto.nombre }}</h5>
+                <p class="card-text"><strong>Descripción:</strong> {{ producto.descripcion }}</p>
+                <p class="card-text"><strong>Precio:</strong> ${{ producto.precio }}</p>
+                <p class="card-text"><strong>Stock Mínimo:</strong> {{ producto.stock_minimo }}</p>
+                <p class="card-text"><strong>Categoría:</strong> {{ producto.categoria }}</p>
+                <p class="card-text"><strong>Marca:</strong> {{ producto.marca }}</p>
+                <p class="card-text"><strong>Proveedor:</strong> {{ producto.proveedor }}</p>
+            </div>
+        </div>
+        <a href="{% url 'producto-list' %}" class="btn btn-secondary mt-4">Volver</a>
+    </div>
+</body>
+</html>
